@@ -28,7 +28,6 @@
     "@payloadcms/richtext-slate": "3.0.0-beta.108",
     "@payloadcms/ui": "3.0.0-beta.108",
     "babel-plugin-react-compiler": "0.0.0-experimental-48eb8f4-20240822",
-    "cross-env": "^7.0.3",
     "graphql": "^16.8.2",
     "next": "15.0.0-canary.104",
     "payload": "3.0.0-beta.108",
@@ -41,6 +40,8 @@
     "@types/node": "^20.14.9",
     "@types/react": "npm:types-react@19.0.0-rc.0",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
     "eslint": "^8.57.0",
     "eslint-config-next": "15.0.0-canary.104",
     "typescript": "5.5.4"
