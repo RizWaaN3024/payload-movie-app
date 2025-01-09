@@ -22,12 +22,9 @@ import {
 import { buildConfig } from 'payload'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
-import dotenv from 'dotenv';
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-
-dotenv.config();
 
 export default buildConfig({
   //editor: slateEditor({}),
@@ -75,7 +72,7 @@ export default buildConfig({
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.POSTGRES_URI || ''
+      connectionString: process.env.POSTGRES_URL || ''
     }
   }),
 
