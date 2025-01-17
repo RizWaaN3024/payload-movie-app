@@ -15,7 +15,7 @@ const Page = async () => {
     // })
     return (
         <>
-            <main>
+            {/* <main>
                 <article>
                     <Badge />
                     <h1>Payload 3.0 - {payload?.config?.collections?.length} collections loaded</h1>{' '}
@@ -51,12 +51,7 @@ const Page = async () => {
                     </pre>
                 </div>
                 <p>This is the example in action - here is a list of all page titles:</p>
-                {/* <ul>
-                    {data.docs.map((doc) => (
-                        <li key={doc.id}>{doc.title ?? 'No title'}</li>
-                    ))}
-                </ul> */}
-            </main>
+            </main> */}
             <Background />
         </>
     )
