@@ -9,6 +9,7 @@ const Header = () => {
             <Link href="/" className="text-xl font-bold">
                 <h1>Our Favourite Movies</h1>
             </Link>{' '}
+
             <Link href="/add" className="text-xl font-light">
                 Add A Movie
             </Link>
