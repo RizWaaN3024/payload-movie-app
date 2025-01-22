@@ -7,5 +7,5 @@ export async function searchMovies(query: string) {
         id,
         poster_path,
         title
-    })).filter(({ poster_path }: { poster_path: string }) => !poster_path);
+    })).filter(({ poster_path }: { poster_path: string }) => !!poster_path);
 }
