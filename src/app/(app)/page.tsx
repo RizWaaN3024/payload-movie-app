@@ -6,9 +6,6 @@ import config from '@payload-config'
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 
 const Page = async () => {
-    const payload = await getPayloadHMR({
-        config,
-    })
     return (
         <>
             <Background />
