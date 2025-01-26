@@ -1,4 +1,4 @@
-import { MoviesCollection } from '@/app/collections/movie'
+import { MoviesCollection } from '@/app/collections/Movies/movie'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import {
     lexicalEditor
@@ -9,7 +9,7 @@ import { en } from 'payload/i18n/en'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url';
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob';
-import { MediaCollection } from '@/app/collections/media'
+import { MediaCollection } from '@/app/collections/Media/media'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
