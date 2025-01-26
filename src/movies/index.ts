@@ -46,7 +46,7 @@ export async function addMovieAction(movieId: number) {
     const movie = await payload.create({
         collection: 'movies',
         data: {
-            name: 'title',
+            name: title,
             url: `https://www.themoviedb.org/movie/${movieId}`,
             votes: 0,
             poster: posterMedia.id,

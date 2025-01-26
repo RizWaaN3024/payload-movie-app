@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Input } from "@/components/ui/input";
+import { addMovieAction } from "@/movies";
 import { posterURL } from "@/movies/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -14,9 +15,15 @@ export default function Page() {
 
     useEffect(() => {
         fetch(`/api/search?query=${encodeURIComponent(query)}`)
-            .then((res) => res.json())
+            .then((res) => {
+                if (!res.ok) throw new Error('Failed to fetch');
+                return res.json();
+            })
             .then(setMovies)
-    }, [query])
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }, [query]);
 
     const router = useRouter();
 
