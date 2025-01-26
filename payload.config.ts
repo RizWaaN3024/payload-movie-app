@@ -7,13 +7,25 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { en } from 'payload/i18n/en'
 import sharp from 'sharp'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'url';
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob';
+import { MediaCollection } from '@/app/collections/media'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
     //editor: slateEditor({}),
+    plugins: process.env.BLOB_READ_WRITE_TOKEN
+        ? [
+            vercelBlobStorage({
+                collections: {
+                    [MediaCollection.slug]: true,
+                },
+                token: process.env.BLOB_READ_WRITE_TOKEN || ''
+            })
+        ]
+        : [],
     editor: lexicalEditor(),
     collections: [
         {
