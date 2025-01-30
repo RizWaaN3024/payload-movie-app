@@ -15,7 +15,6 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-    //editor: slateEditor({}),
     plugins: process.env.BLOB_READ_WRITE_TOKEN
         ? [
             vercelBlobStorage({
