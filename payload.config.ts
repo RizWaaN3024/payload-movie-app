@@ -11,6 +11,7 @@ import { fileURLToPath } from 'url';
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob';
 import { MediaCollection } from '@/app/collections/Media/media'
 
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
